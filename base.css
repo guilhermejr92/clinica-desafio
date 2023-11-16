@@ -1,6 +1,8 @@
-html, body {
+html,
+body {
     margin: 0;
 }
+
 body {
     background-color: #f1f1f1;
     display: flex;
@@ -8,31 +10,59 @@ body {
 }
 
 .wrapper {
-    width: 1200px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     background-color: aquamarine;
 }
+
 .main {
     display: flex;
     flex-flow: column;
-    width: 85%;
 }
+
 .menu {
-    width: 15%;
+    display: flex;
+    flex-direction: column;
     background-color: aqua;
-    padding: 20px 20px 0px;
+    padding: 20px;
 }
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+:root {
+    --primary-color: rgb(5, 108, 108);
+    --secondary-color: rgb(133, 111, 138);
+
+}
+
 .header {
-    background-color: rgb(5, 108, 108);
+    background-color: var(--primary-color);
     min-height: 150px;
 }
+
 .sobre {
-    background-color: rgb(133, 111, 138);
+    background-color: var(--secondary-color);
     min-height: 300px;
     padding: 20px;
 }
+
 .footer {
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     min-height: 150px;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,29 +9,37 @@
     <link rel="stylesheet" href="base.css">
 
     <style>
-       table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-       } 
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
     </style>
 </head>
+
 <body>
     <div class="wrapper">
         <div class="menu">
             <ul>
-                <a href="index.html"> < Voltar</a>
+                <a href="index.html"> Voltar</a>
             </ul>
         </div>
 
         <div class="main">
             <div class="header">
-                <img src="https://img.freepik.com/vetores-premium/veterinario-e-medico-com-cao-e-gato-no-balcao-na-clinica-veterinaria_36082-523.jpg">
+                <img
+                    src="https://img.freepik.com/vetores-premium/veterinario-e-medico-com-cao-e-gato-no-balcao-na-clinica-veterinaria_36082-523.jpg">
             </div>
-    
+
             <div class="sobre">
                 <i><u>SOBRE</u></i>
-                <p><strong>Ambulatório/Consultório Veterinário: estabelecimentos comumente geridos por médicos veterinários que prestam um serviço básico de consulta, além de aplicar curativos, medicamentos e vacinações aos animais de estimação.</strong></p>
-                <p><strong>Com estrutura moderna, uma equipe altamente treinada, equipamentos de ponta e uma filosofia própria, que acolhe seu pet como uma membro da família, temos sido referência, desde a nossa fundação, em exames de alta e média complexidade, internação e cirurgias.</strong></p>
+                <p><strong>Ambulatório/Consultório Veterinário: estabelecimentos comumente geridos por médicos
+                        veterinários que prestam um serviço básico de consulta, além de aplicar curativos, medicamentos
+                        e vacinações aos animais de estimação.</strong></p>
+                <p><strong>Com estrutura moderna, uma equipe altamente treinada, equipamentos de ponta e uma filosofia
+                        própria, que acolhe seu pet como uma membro da família, temos sido referência, desde a nossa
+                        fundação, em exames de alta e média complexidade, internação e cirurgias.</strong></p>
 
                 <table>
                     <tr>
@@ -75,28 +84,42 @@
                     <input type="hidden" name="email_anuncio" value="clinicadoscaesegatos@gmail.com">
                     <input type="text" name="email" size="1" value="" style="display:none;visibility:hidden;">
                     <div class="row">
-                    <div class="col-xl-12">
-                    <input type="text" name="nome" placeholder="Seu nome " required="">
+                        <div class="col-xl-12">
+                            <input type="text" name="nome" placeholder="Seu nome " required="">
+                        </div>
+                        <div class="col-xl-6">
+                            <input type="text" name="telefone" id="idTelefone" maxlength="15" placeholder="Telefone "
+                                required="">
+                        </div>
+                        <div class="col-xl-6">
+                            <input type="email" name="campo_email" placeholder="E-mail" required="">
+                        </div>
+                        <div class="col-xl-12">
+                            <textarea name="mensagem" id="idMensagem" placeholder="Mensagem" rows="4"
+                                required=""></textarea>
+                        </div>
+                        <div class="col-xl-8">
+                            <div class="g-recaptcha" data-sitekey="6LcJvaEaAAAAAJm0KmJUZWyH1WZUFYiK56otj4Th">
+                                <div style="width: 304px; height: 78px;">
+                                    <div><iframe title="reCAPTCHA"
+                                            src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcJvaEaAAAAAJm0KmJUZWyH1WZUFYiK56otj4Th&amp;co=aHR0cHM6Ly93d3cudml0cmluZXJpby5jb20uYnI6NDQz&amp;hl=pt-BR&amp;v=vP4jQKq0YJFzU6e21-BGy3GP&amp;size=normal&amp;cb=gwj4ba9muba2"
+                                            width="304" height="78" role="presentation" name="a-ttem716q0t6a"
+                                            frameborder="0" scrolling="no"
+                                            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"></iframe>
+                                    </div><textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                        class="g-recaptcha-response"
+                                        style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                </div><iframe style="display: none;"></iframe>
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <button type="submit" class="boxed-btn3">Enviar</button>
+                        </div>
                     </div>
-                    <div class="col-xl-6">
-                    <input type="text" name="telefone" id="idTelefone" maxlength="15" placeholder="Telefone " required="">
-                    </div>
-                    <div class="col-xl-6">
-                    <input type="email" name="campo_email" placeholder="E-mail" required="">
-                    </div>
-                    <div class="col-xl-12">
-                    <textarea name="mensagem" id="idMensagem" placeholder="Mensagem" rows="4" required=""></textarea>
-                    </div>
-                    <div class="col-xl-8">
-                    <div class="g-recaptcha" data-sitekey="6LcJvaEaAAAAAJm0KmJUZWyH1WZUFYiK56otj4Th"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcJvaEaAAAAAJm0KmJUZWyH1WZUFYiK56otj4Th&amp;co=aHR0cHM6Ly93d3cudml0cmluZXJpby5jb20uYnI6NDQz&amp;hl=pt-BR&amp;v=vP4jQKq0YJFzU6e21-BGy3GP&amp;size=normal&amp;cb=gwj4ba9muba2" width="304" height="78" role="presentation" name="a-ttem716q0t6a" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
-                    </div>
-                    <div class="col-xl-4">
-                    <button type="submit" class="boxed-btn3">Enviar</button>
-                    </div>
-                    </div>
-                    </form>
+                </form>
             </div>
         </div>
     </div>
 </body>
+
 </html>
