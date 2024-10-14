@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -9,45 +9,144 @@
     <link rel="stylesheet" href="base.css">
 
     <style>
-        table,
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilizando a tabela */
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            text-align: left;
+            background-color: #f9f9f9;
+        }
+
         th,
         td {
-            border: 1px solid black;
-            border-collapse: collapse;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Estilo da seção "SOBRE" */
+        .sobre {
+            padding: 30px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .sobre h2 {
+            color: #4CAF50;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .sobre p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .sobre i,
+        .sobre u {
+            font-style: normal;
+            font-weight: bold;
+            color: #4CAF50;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos do rodapé */
+        .footer {
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+        .footer h3 {
+            margin: 10px 0;
+        }
+
+        .footer form input,
+        .footer form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .footer form button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .footer form button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="menu">
-            <ul>
-                <a href="index.html"> Voltar</a>
-            </ul>
+    <header class="header">
+        <div class="container">
+            <h1>Centro Veterinário</h1>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="header">
+            <img src="principal.png" alt="Imagem principal" style="width:100%; height:auto;">
         </div>
 
-        <div class="main">
-            <div class="header">
-                <img
-                    src="https://img.freepik.com/vetores-premium/veterinario-e-medico-com-cao-e-gato-no-balcao-na-clinica-veterinaria_36082-523.jpg">
-            </div>
+        <div class="sobre">
+            <h2>Sobre</h2>
+            <p><strong>Ambulatório/Consultório Veterinário:</strong> estabelecimentos geridos por médicos veterinários
+                que oferecem serviços básicos de consulta, curativos, medicamentos e vacinações. Aqui, garantimos um
+                atendimento de qualidade para os animais de estimação.</p>
+            <p>Com estrutura moderna, equipe treinada e tecnologia de ponta, tratamos cada animal como parte da família.
+                Desde nossa fundação, somos referência em exames de alta complexidade, internação e cirurgias, sempre
+                colocando o bem-estar dos pets em primeiro lugar.</p>
 
-            <div class="sobre">
-                <i><u>SOBRE</u></i>
-                <p><strong>Ambulatório/Consultório Veterinário: estabelecimentos comumente geridos por médicos
-                        veterinários que prestam um serviço básico de consulta, além de aplicar curativos, medicamentos
-                        e vacinações aos animais de estimação.</strong></p>
-                <p><strong>Com estrutura moderna, uma equipe altamente treinada, equipamentos de ponta e uma filosofia
-                        própria, que acolhe seu pet como uma membro da família, temos sido referência, desde a nossa
-                        fundação, em exames de alta e média complexidade, internação e cirurgias.</strong></p>
-
-                <table>
+            <table>
+                <thead>
                     <tr>
                         <th>Serviços</th>
                         <th>Segunda a Sexta</th>
                         <th>Sábados</th>
                         <th>Feriados</th>
                     </tr>
+                </thead>
+                <tbody>
                     <tr>
                         <td>Consultas/Check-up</td>
                         <td>09h - 20h</td>
@@ -55,7 +154,7 @@
                         <td>09h - 15h</td>
                     </tr>
                     <tr>
-                        <td>Vacinação Canina/felina</td>
+                        <td>Vacinação Canina/Felina</td>
                         <td>09h - 20h</td>
                         <td>09h - 15h</td>
                         <td>09h - 15h</td>
@@ -72,52 +171,40 @@
                         <td>09h - 15h</td>
                         <td>09h - 15h</td>
                     </tr>
-                </table>
-            </div>
+                </tbody>
+            </table>
+        </div>
 
-            <div class="footer">
-                <h3>Fale <span>Conosco</span></h3>
-                <form id="formAnuncio" name="formAnuncio" method="post" action="">
-                    <input type="hidden" name="registro" value="enviarContato">
-                    <input type="hidden" name="id_anuncio" value="4561">
-                    <input type="hidden" name="id_cliente" value="181">
-                    <input type="hidden" name="email_anuncio" value="clinicadoscaesegatos@gmail.com">
-                    <input type="text" name="email" size="1" value="" style="display:none;visibility:hidden;">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <input type="text" name="nome" placeholder="Seu nome " required="">
-                        </div>
-                        <div class="col-xl-6">
-                            <input type="text" name="telefone" id="idTelefone" maxlength="15" placeholder="Telefone "
-                                required="">
-                        </div>
-                        <div class="col-xl-6">
-                            <input type="email" name="campo_email" placeholder="E-mail" required="">
-                        </div>
-                        <div class="col-xl-12">
-                            <textarea name="mensagem" id="idMensagem" placeholder="Mensagem" rows="4"
-                                required=""></textarea>
-                        </div>
-                        <div class="col-xl-8">
-                            <div class="g-recaptcha" data-sitekey="6LcJvaEaAAAAAJm0KmJUZWyH1WZUFYiK56otj4Th">
-                                <div style="width: 304px; height: 78px;">
-                                    <div><iframe title="reCAPTCHA"
-                                            src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcJvaEaAAAAAJm0KmJUZWyH1WZUFYiK56otj4Th&amp;co=aHR0cHM6Ly93d3cudml0cmluZXJpby5jb20uYnI6NDQz&amp;hl=pt-BR&amp;v=vP4jQKq0YJFzU6e21-BGy3GP&amp;size=normal&amp;cb=gwj4ba9muba2"
-                                            width="304" height="78" role="presentation" name="a-ttem716q0t6a"
-                                            frameborder="0" scrolling="no"
-                                            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"></iframe>
-                                    </div><textarea id="g-recaptcha-response" name="g-recaptcha-response"
-                                        class="g-recaptcha-response"
-                                        style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
-                                </div><iframe style="display: none;"></iframe>
-                            </div>
-                        </div>
-                        <div class="col-xl-4">
-                            <button type="submit" class="boxed-btn3">Enviar</button>
-                        </div>
+        <div class="footer">
+            <h3>Fale <span>Conosco</span></h3>
+            <form id="formAnuncio" name="formAnuncio" method="post" action="">
+                <input type="hidden" name="registro" value="enviarContato">
+                <input type="hidden" name="id_anuncio" value="4561">
+                <input type="hidden" name="id_cliente" value="181">
+                <input type="hidden" name="email_anuncio" value="clinicadoscaesegatos@gmail.com">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <input type="text" name="nome" placeholder="Seu nome " required="">
                     </div>
-                </form>
-            </div>
+                    <div class="col-xl-6">
+                        <input type="text" name="telefone" id="idTelefone" maxlength="15" placeholder="Telefone "
+                            required="">
+                    </div>
+                    <div class="col-xl-6">
+                        <input type="email" name="campo_email" placeholder="E-mail" required="">
+                    </div>
+                    <div class="col-xl-12">
+                        <textarea name="mensagem" id="idMensagem" placeholder="Mensagem" rows="4"
+                            required=""></textarea>
+                    </div>
+                    <div class="col-xl-8">
+                        <div class="g-recaptcha" data-sitekey="6LcJvaEaAAAAAJm0KmJUZWyH1WZUFYiK56otj4Th"></div>
+                    </div>
+                    <div class="col-xl-4">
+                        <button type="submit" class="boxed-btn3">Enviar</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </body>

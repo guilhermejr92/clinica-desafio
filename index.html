@@ -1,53 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Veterinário</title>
     <link rel="stylesheet" href="base.css">
-
-    <style>
-
-        
-
-       table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-       } 
-    </style>
+    <meta name="description"
+        content="O melhor cuidado para seu pet com serviços de consulta, vacinação, cirurgia e muito mais. Entre em contato para agendar uma consulta.">
 </head>
+
 <body>
-    <div class="wrapper">
-        <div class="menu">
-            <ul>
-                <li>
-                    <a href="contato.html" title="Clique aqui e confira" target="_self">Informação de Contato</a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a href="sobre.html" title="Sobre a Clinica" target="_self">Sobre a Clínica</a>
-                </li>
-            </ul>
-            
+    <header class="header">
+        <div class="container">
+            <h1>Centro Veterinário</h1>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div class="main">
-            <div class="header">
-                <img src="https://img.freepik.com/vetores-premium/veterinario-e-medico-com-cao-e-gato-no-balcao-na-clinica-veterinaria_36082-523.jpg">
-            </div>
-    
-            <div class="sobre">
-                <i><u>SOBRE</u></i>
-                <p><strong>Ambulatório/Consultório Veterinário: estabelecimentos comumente geridos por médicos veterinários que prestam um serviço básico de consulta, além de aplicar curativos, medicamentos e vacinações aos animais de estimação.</strong></p>
-                <p><strong>Com estrutura moderna, uma equipe altamente treinada, equipamentos de ponta e uma filosofia própria, que acolhe seu pet como uma membro da família, temos sido referência, desde a nossa fundação, em exames de alta e média complexidade, internação e cirurgias.</strong></p>
-            </div>
+    <section class="banner">
+        <div class="container">
+            <h2>Bem-vindo ao Centro Veterinário</h2>
+            <p>Sua clínica de confiança para cuidar do seu melhor amigo.</p>
+            <img src="principal.png" alt="Imagem principal" style="width:100%; height:auto;">
+        </div>
+    </section>
 
-            <div class="footer">
-                <img src="https://img.freepik.com/vetores-premium/veterinario-e-medico-com-cao-e-gato-no-balcao-na-clinica-veterinaria_36082-523.jpg">
+    <section class="about">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>O Centro Veterinário é um estabelecimento dedicado ao bem-estar dos animais de estimação. Com uma equipe
+                de veterinários especializados, oferecemos uma variedade de serviços para garantir que seu animal receba
+                o melhor cuidado possível.</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="service">
+                <h3>Consultas Veterinárias</h3>
+                <p>Realizamos consultas abrangentes para garantir a saúde e o bem-estar do seu animal de estimação.</p>
+            </div>
+            <div class="service">
+                <h3>Vacinação</h3>
+                <p>Oferecemos uma variedade de vacinas para proteger seu animal contra doenças comuns.</p>
+            </div>
+            <div class="service">
+                <h3>Cirurgia</h3>
+                <p>Nossa equipe realiza cirurgias especializadas com cuidado e competência.</p>
+            </div>
+            <div class="service">
+                <h3>Exames Laboratoriais</h3>
+                <p>Realizamos uma variedade de exames laboratoriais para diagnóstico preciso.</p>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Estamos sempre prontos para ajudar. Entre em contato conosco para marcar uma consulta ou esclarecer
+                dúvidas.</p>
+            <form id="contactForm" method="post" action="">
+                <input type="text" name="name" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu E-mail" required>
+                <textarea name="message" placeholder="Sua Mensagem" rows="4" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="map">
+        <div class="container">
+            <h2>Localização</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093746!2d144.95373631531675!3d-37.8162797797519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f1f5d49b%3A0x5045675218cedf0!2zMjM1IFZpY3RvcmlhIFN0LCBNZWxib3VybmUgVklDIDMwMDAsIEF1c3RyYWxpYQ!5e0!3m2!1spt-BR!2sbr!4v1633915306931!5m2!1spt-BR!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Centro Veterinário. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
+
 </html>

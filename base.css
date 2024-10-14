@@ -1,68 +1,227 @@
-html,
+/* Estilos existentes */
 body {
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-body {
-    background-color: #f1f1f1;
-    display: flex;
-    justify-content: center;
-}
-
-.wrapper {
-    display: grid;
-    grid-template-columns: 15% 1fr;
-    width: 100%;
+.container {
     max-width: 1200px;
     margin: 0 auto;
-    background-color: aquamarine;
-}
-
-.main {
-    display: flex;
-    flex-flow: column;
-}
-
-.menu {
-    display: flex;
-    flex-direction: column;
-    background-color: aqua;
     padding: 20px;
 }
 
+.header {
+    background-color: #005a5a;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
 .menu ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
 .menu li {
-    margin-bottom: 10px;
+    display: inline;
+    margin: 0 15px;
 }
 
 .menu a {
+    color: #fff;
     text-decoration: none;
-    color: #333;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-:root {
-    --primary-color: rgb(5, 108, 108);
-    --secondary-color: rgb(133, 111, 138);
-
+.menu a:hover {
+    color: #d4d4d4;
 }
 
-.header {
-    background-color: var(--primary-color);
-    min-height: 150px;
+.banner {
+    background-image: url('https://via.placeholder.com/1500x500');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
 }
 
-.sobre {
-    background-color: var(--secondary-color);
-    min-height: 300px;
+.about,
+.services,
+.contact,
+.map {
+    padding: 50px 0;
+}
+
+.about h2,
+.services h2,
+.contact h2,
+.map h2 {
+    text-align: center;
+    color: #005a5a;
+    /* Cor dos títulos das seções */
+}
+
+.about p,
+.services p {
+    text-align: center;
+    max-width: 800px;
+    /* Largura máxima para os parágrafos */
+    margin: 0 auto;
+    /* Centralizar o parágrafo */
+    line-height: 1.6;
+    /* Aumenta o espaço entre linhas */
+}
+
+.services {
+    background-color: #f1f1f1;
+}
+
+.service {
+    margin-bottom: 30px;
+    text-align: center;
+    /* Centraliza os serviços */
+}
+
+.service h3 {
+    color: #005a5a;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact button {
+    background-color: #005a5a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #003d3d;
+}
+
+footer {
+    background-color: #005a5a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.service-icon {
+    display: flex;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+/* Novos Estilos */
+.banner h2 {
+    font-size: 2.5rem;
+    /* Aumenta o tamanho do título na seção de boas-vindas */
+}
+
+.banner p {
+    font-size: 1.2rem;
+    /* Aumenta o tamanho do texto na seção de boas-vindas */
+}
+
+.service {
+    border: 1px solid #ccc;
+    /* Borda para cada serviço */
+    border-radius: 8px;
+    /* Bordas arredondadas */
     padding: 20px;
+    /* Espaçamento interno */
+    transition: transform 0.3s;
+    /* Efeito de transformação */
 }
 
-.footer {
-    background-color: #fff;
-    min-height: 150px;
+.service:hover {
+    transform: scale(1.05);
+    /* Aumenta o tamanho ao passar o mouse */
+}
+
+/* Estilos para a tabela */
+.schedule {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.schedule th,
+.schedule td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.schedule th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.schedule tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilos para os serviços */
+.service-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Espaçamento entre os itens */
+}
+
+.service-item {
+    flex: 1 1 200px;
+    /* Tamanho mínimo para cada item */
+    text-align: center;
+    border: 1px solid #ddd;
+    /* Borda para cada item */
+    border-radius: 8px;
+    /* Borda arredondada */
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+    /* Efeito de zoom ao passar o mouse */
+}
+
+.service-icon {
+    width: 60px;
+    /* Tamanho do ícone */
+    margin-bottom: 10px;
+}
+
+/* Estilos para a seção de depoimentos */
+.testimonial-item {
+    margin-bottom: 20px;
+    /* Espaçamento entre os depoimentos */
+    border-left: 5px solid #4CAF50;
+    /* Destaque para o lado esquerdo */
+    padding-left: 15px;
+}
+
+.testimonial-item blockquote {
+    font-style: italic;
+    /* Estilo itálico para o texto */
+    color: #555;
+    /* Cor do texto */
 }

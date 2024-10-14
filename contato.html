@@ -1,99 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro Veterinário</title>
+    <title>Contato - Centro Veterinário</title>
     <link rel="stylesheet" href="base.css">
-
-    <style>
-        table,
-        th,
-        td {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="menu">
-            <ul>
-                <a href="index.html"> Voltar</a>
-            </ul>
-
+    <header class="header">
+        <div class="container">
+            <h1>Centro Veterinário</h1>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div class="main">
-            <div class="header">
-                <img
-                    src="https://img.freepik.com/vetores-premium/veterinario-e-medico-com-cao-e-gato-no-balcao-na-clinica-veterinaria_36082-523.jpg">
-            </div>
+    <section class="contact">
+        <div class="container">
+            <h2>Entre em Contato Conosco</h2>
+            <form action="enviar_mensagem.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" placeholder="Seu nome" required pattern="[A-Za-zÀ-ÿ\s]+"
+                    title="Apenas letras são permitidas.">
 
-            <div class="sobre">
-                <i><u>SOBRE</u></i>
-                <p><strong>Ambulatório/Consultório Veterinário: estabelecimentos comumente geridos por médicos
-                        veterinários que prestam um serviço básico de consulta, além de aplicar curativos, medicamentos
-                        e vacinações aos animais de estimação.</strong></p>
-                <p><strong>Com estrutura moderna, uma equipe altamente treinada, equipamentos de ponta e uma filosofia
-                        própria, que acolhe seu pet como uma membro da família, temos sido referência, desde a nossa
-                        fundação, em exames de alta e média complexidade, internação e cirurgias.</strong></p>
+                <label for="email">E-mail:</label>
+                <input type="email" name="campo_email" placeholder="E-mail" required
+                    title="Por favor, insira um e-mail válido. Exemplo: exemplo@gmail.com"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
 
-                <table>
-                    <tr>
-                        <th>Serviços</th>
-                        <th>Segunda a Sexta</th>
-                        <th>Sábados</th>
-                        <th>Feriados</th>
-                    </tr>
-                    <tr>
-                        <td>Consultas/Check-up</td>
-                        <td>09h - 20h</td>
-                        <td>09h - 15h</td>
-                        <td>09h - 15h</td>
-                    </tr>
-                    <tr>
-                        <td>Vacinação Canina/felina</td>
-                        <td>09h - 20h</td>
-                        <td>09h - 15h</td>
-                        <td>09h - 15h</td>
-                    </tr>
-                    <tr>
-                        <td>Castração</td>
-                        <td>09h - 20h</td>
-                        <td>09h - 15h</td>
-                        <td>09h - 15h</td>
-                    </tr>
-                    <tr>
-                        <td>Remoção de Tártaro</td>
-                        <td>09h - 20h</td>
-                        <td>09h - 15h</td>
-                        <td>09h - 15h</td>
-                    </tr>
-                </table>
-            </div>
+                <label for="telefone">Telefone:</label>
+                <input type="text" name="telefone" id="idTelefone" maxlength="15" placeholder="Telefone" required
+                    pattern="\d+" title="Apenas números são permitidos.">
 
-            <div class="footer">
-                <h3>Endereço:</h3>
-                <p>Avenida Animais Felizes, 77 - Felicidade<br>
-                    Resende - RJ<br>
-                </p>
-                <hr>
-                <h3>Telefones:</h3>
-                <div id="telefoneincompleto2">(24) 3355-5588</div>
-                <div id="whatsapp2" style="display: none;">(24) 3355-4431</div>
-                <div id="whatsincompleto2">(24) 9999<a
-                        href="https://wa.me/5511999999999?text=Olá, gostaria de mais informações sobre seus produtos.">Enviar
-                        mensagem no WhatsApp</a>
-                </div>
-                <h3>E-mail:</h3>
-                <p style="width: 90%; word-wrap: break-word;">clinicadoscaesegatos@gmail.com</p>
-            </div>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
         </div>
-    </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <h3>Endereço:</h3>
+            <p>Avenida Animais Felizes, 77 - Felicidade<br>Resende - RJ</p>
+            <hr>
+            <h3>Telefones:</h3>
+            <p>(24) 3355-5588 | WhatsApp: (24) 3355-4431</p>
+            <h3>E-mail:</h3>
+            <p>clinicadoscaesegatos@gmail.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
