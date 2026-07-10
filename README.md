@@ -1,31 +1,45 @@
-# Centro Veterinário - Website
+# Centro Veterinário — Website
 
-Este é o repositório oficial do site da **Clínica Veterinária**, criado para oferecer informações detalhadas sobre os serviços prestados, horários de funcionamento, localização, e facilitar o agendamento de consultas para os pets.
-
-
-## Índice
-
-- [Sobre o Projeto](#sobre-o-projeto)
-- [Funcionalidades](#funcionalidades)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-
-## Sobre o Projeto
-
-O site da **Clínica Veterinária** foi desenvolvido para ser simples, intuitivo e responsivo, facilitando o acesso de donos de pets aos nossos serviços. A página de serviços detalha cada um dos atendimentos oferecidos, como **consultas, vacinação, castração, remoção de tártaro** e **atendimento de emergência**.
-
-O objetivo é melhorar a experiência dos usuários com um design moderno e uma navegação clara, permitindo que donos de animais encontrem as informações que precisam rapidamente.
+Projeto front-end responsivo para uma clínica veterinária fictícia, desenvolvido com HTML, CSS e JavaScript. A versão 2.0 reorganiza toda a interface, melhora a responsividade, padroniza os componentes e adiciona validação de formulário.
 
 ## Funcionalidades
 
-- Listagem detalhada dos serviços oferecidos pela clínica, com descrições e ícones.
-- Tabela de horários de funcionamento para diferentes serviços.
-- Seção de depoimentos de clientes.
-- Chamada para ação (CTA) incentivando o agendamento de consultas.
-- Seção de contato com informações completas, incluindo endereço, telefones e e-mail clicável.
+- Página inicial com hero, indicadores, serviços e chamada para ação
+- Página institucional com missão, visão e valores
+- Cards de serviços e tabela responsiva de horários
+- Formulário com validação de nome, telefone e e-mail
+- Menu adaptado para dispositivos móveis
+- Links de telefone, WhatsApp e e-mail
 
-## Tecnologias Utilizadas
+## Tecnologias
 
-- **HTML5**: Estrutura e marcação do conteúdo.
-- **CSS3**: Estilos e design responsivo.
-- **JavaScript (Opcional)**: Para futuras funcionalidades dinâmicas (como animações ou validação de formulários).
-- **Fontes e Ícones**: Fontes customizadas e ícones gráficos para serviços.
+- HTML5 semântico
+- CSS3 com Grid, Flexbox, variáveis e media queries
+- JavaScript para menu móvel, validação e ano automático
+
+## Executar localmente
+
+1. Clone o repositório.
+2. Abra a pasta no Visual Studio Code.
+3. Execute `index.html` com a extensão Live Server.
+
+## Estrutura
+
+```text
+assets/
+  css/style.css
+  js/script.js
+  images/
+index.html
+sobre.html
+servicos.html
+contato.html
+```
+
+## Observação
+
+Os dados de endereço e contato são demonstrativos. Para envio real do formulário, conecte um backend ou serviço como Formspree.
+
+## Autor
+
+Guilherme Junior — projeto para portfólio de desenvolvimento front-end.
